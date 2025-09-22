@@ -1,0 +1,81 @@
+/* File: src/classroom/pages/teacher/TeacherNotifications.css */
+
+/* General card styling */
+.card {
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Card gradients for different sections */
+.card-reminder {
+  background: linear-gradient(135deg, #fff7e6, #ffe8a1);
+}
+
+.card-attendance {
+  background: linear-gradient(135deg, #ffe5e5, #ffb3b3);
+}
+
+.card-salary {
+  background: linear-gradient(135deg, #e6ffed, #a8ffbf);
+}
+
+.card-events {
+  background: linear-gradient(135deg, #e6f0ff, #99c2ff);
+}
+
+.card-system {
+  background: linear-gradient(135deg, #f2f2f2, #d9d9d9);
+}
+/* List group items styling - icon on left */
+.list-group-item {
+  border: none;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  gap: 0.5rem; /* spacing between icon and text */
+  transition: background 0.2s;
+}
+
+.list-group-item i {
+  font-size: 1.2rem;
+  flex-shrink: 0; /* icon doesn't shrink */
+  margin-right: 0.5rem;
+}
+
+/* Hover effect for list items */
+.list-group-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+/* Attention-seeker for urgent alerts */
+.list-group-item.text-danger {
+  font-weight: 600;
+}
+
+
+/* Buttons inside list items */
+.list-group-item button {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  margin-left: auto; /* keep button at the right */
+}
+
+/* For smaller screens */
+@media (max-width: 767px) {
+  .list-group-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list-group-item button {
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+}

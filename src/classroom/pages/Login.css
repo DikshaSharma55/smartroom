@@ -1,0 +1,164 @@
+/* 🌗 Smooth Theme Transition */
+.login-container {
+  transition: background-color 0.4s ease, color 0.4s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* full viewport height */  
+}
+
+.form-box{
+  height: 100vh;
+  width: 40vw;
+}
+/* 🌞 Light Mode */
+.light-mode {
+  background-color: #f8f9fa !important; /* force light bg */
+  color: #212529;
+}
+
+/* 🌙 Dark Mode */
+.dark-mode {
+  background-color: #0a192f !important; /* Force dark blue bg */
+  color: #ffffff;
+}
+
+/* 📦 Card Styling */
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  margin-top: 10px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.dark-mode .card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* 🖋 Form Inputs */
+.form-control {
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  
+}
+
+.dark-mode .form-control {
+  background-color: rgba(255, 255, 255, 1);
+  color: white;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #cfd8dc;
+}
+
+/* 🔘 Buttons */
+.btn-primary {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* 🌞 / 🌙 Toggle Icon Hover */
+.position-absolute {
+  transition: transform 0.3s ease;
+}
+
+.position-absolute:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* 🖼 Icon + Title Row */
+.login-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  
+}
+
+.login-header h3 {
+  margin: 0;
+  font-weight: bold;
+  color: #0a192f;
+}
+
+.login-header svg {
+  width: 28px;
+  height: 28px;
+  fill: #0a192f;
+  
+}
+
+
+/* 🔧 Checkbox color fix for dark mode */
+.dark-mode .form-check-label {
+  color: black;
+  
+}
+
+/* 🔧 Forgot password link color fix */
+.dark-mode a {
+  color: #4dabf7;
+}
+
+.dark-mode a:hover {
+  color: #82cfff;
+}
+
+/* 🔧 Sun icon yellow fix (inline style will override) */
+.sun-icon {
+  color: yellow;
+}
+
+/* 🔧 Text below form (signup link) */
+p.text-center {
+  color: #0a192f;
+}
+p.text-center a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+p.text-center a:hover {
+  text-decoration: underline;
+}
+
+.dark-mode p.text-center {
+  color: #0a192f;
+}
+
+.dark-mode p.text-center a {
+  color: #66b2ff;
+}
+.dark-mode .login-header{
+  color: black !important;
+}
+/* ================= Forgot Password Page CSS ================= */
+.forgot-card {
+  max-width: 400px; /* maximum width for desktop */
+  width: 100%;      /* responsive for smaller screens */
+  padding: 2rem;    /* internal spacing */
+}
+/* ================= Sign Up Form Height Fix ================= */
+.signup-card,
+.forgot-card {
+  padding: 1.5rem; /* thoda kam padding, form height choti ho jayegi */
+}
+/* ================= Attendance  ================= */
+.mark-attendance{
+  background-color: #0a192f;
+  color: #ffffff;
+  
+}
+
+.dark-mode .mark-attendance{
+  background-color: #ffffff !important;
+  color: #0a192f !important;
+}

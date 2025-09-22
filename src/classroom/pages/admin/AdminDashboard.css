@@ -1,0 +1,202 @@
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Sidebar (Fixed) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #0a192f;
+  color: #fff;
+  transition: width 0.3s ease, background-color 0.4s ease, color 0.4s ease;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar h4,
+.sidebar span,
+.sidebar li {
+  transition: opacity 0.3s ease;
+}
+
+.sidebar ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content (Shift for Sidebar + Header Fix) */
+.main-content {
+  flex-grow: 1;
+  margin-left: 250px; /* space for sidebar */
+  padding-top: 70px;  /* ✅ push content below fixed header */
+  background-color: #f8f9fa;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Header (Fixed) */
+.main-content .header {
+  position: fixed;
+  top: 0;
+  left: 250px;
+  right: 0;
+  height: 60px;
+  background-color: #0a192f;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1001;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Cards */
+.card {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+.hover-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .sidebar {
+  background-color: #ffffff;
+  color: #0a192f;
+}
+
+.dark-mode .main-content {
+  background-color: #0a192f;
+  color: #ffffff;
+}
+
+.dark-mode .main-content .header {
+  background-color: #ffffff;
+  color: #0a192f;
+}
+
+.dark-mode .card {
+  background-color: #fff;
+  color: black;
+}
+
+.dark-mode table {
+  color: #ffffff;
+}
+
+.dark-mode table th,
+.dark-mode table td {
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* Smooth theme transitions */
+.dashboard-container,
+.sidebar,
+.main-content,
+.card,
+table {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.sidebar.collapsed ~ .main-content {
+  margin-left: 70px; /* sidebar collapsed width */
+}
+
+.sidebar.collapsed ~ .main-content .header {
+  left: 70px;
+}
+/* ================= Dashboard Container ================= */
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ================= Sidebar ================= */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #0a192f;
+  color: #fff;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* ================= Main Content ================= */
+.main-content {
+  flex-grow: 1;
+  margin-left: 250px; /* leaves space for sidebar */
+  padding-top: 70px; /* ✅ space for fixed header */
+  transition: margin-left 0.3s ease, background-color 0.3s ease;
+}
+
+/* ================= Fixed Header ================= */
+.main-content > .d-flex.shadow-sm {
+  position: fixed;
+  top: 0;
+  left: 250px; /* align with sidebar */
+  right: 0;
+  height: 60px;
+  background-color: #0a192f;
+  color: white;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  transition: left 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ================= Collapsed Sidebar Adjustments ================= */
+.sidebar.collapsed ~ .main-content {
+  margin-left: 70px;
+}
+
+.sidebar.collapsed ~ .main-content > .d-flex.shadow-sm {
+  left: 70px;
+}
+
+/* ================= Dark Mode ================= */
+.dark-mode .sidebar {
+  background-color: #ffffff;
+  color: #0a192f;
+}
+
+.dark-mode .main-content {
+  background-color: #0a192f;
+  color: #ffffff;
+}
+
+.dark-mode .main-content > .d-flex.shadow-sm {
+  background-color: #ffffff;
+  color: #0a192f;
+}

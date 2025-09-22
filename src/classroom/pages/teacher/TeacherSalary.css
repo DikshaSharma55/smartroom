@@ -1,0 +1,91 @@
+.salary-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.teacher-container {
+  margin-left: 250px; /* adjust according to your sidebar width */
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* keep previous gradient card styles and hover effects */
+
+/* Gradient Cards */
+.card-gradient {
+  background: linear-gradient(135deg, #28a745, #198754);
+  color: white;
+}
+
+.card-gradient-deduction {
+  background: linear-gradient(135deg, #dc3545, #a71d2a);
+  color: white;
+}
+
+.card-gradient-history {
+  background: linear-gradient(135deg, #0d6efd, #0a58ca);
+  color: white;
+}
+
+.card-gradient-alert {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  color: white;
+}
+
+.card-gradient-query {
+  background: linear-gradient(135deg, #6f42c1, #5a32a3);
+  color: white;
+}
+
+.card-title {
+  margin-bottom: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+/* Table Row Highlight for Pending */
+.highlight-row {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+table,td,th{
+  background-color: transparent !important;
+  border: none;
+  color: white;
+}
+
+/* Button Hover Effects */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.btn-sm{
+  border: white;
+  background-color: white !important;
+}
+
+/* Alert List Styling */
+.alert-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+  .card {
+    text-align: center;
+  }
+  .btn {
+    width: 100%;
+  }
+}

@@ -323,10 +323,6 @@ export default function Login() {
     </div>
     <div>
     </div>
-    
-    <div className="mb-3 text-center">
-</div>
-
     </div>
   );
 }

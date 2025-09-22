@@ -325,7 +325,6 @@ export default function Login() {
     </div>
     
     <div className="mb-3 text-center">
-  <h6>Quick Dashboard Access (Demo)</h6>
 </div>
 
     </div>

@@ -326,13 +326,6 @@ export default function Login() {
     
     <div className="mb-3 text-center">
   <h6>Quick Dashboard Access (Demo)</h6>
-  <div className="d-flex justify-content-center gap-2 flex-wrap">
-    <button onClick={() => navigate("/admin")}>Admin</button>
-    <button  onClick={() => navigate("/manager")}>Manager</button>
-    <button  onClick={() => navigate("/teacher")}>Teacher</button>
-    <button onClick={() => navigate("/student")}>Student</button>
-    <button  onClick={() => navigate("/parent")}>Parent</button>
-  </div>
 </div>
 
     </div>
